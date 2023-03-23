@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inconsolata', monospace;
+}
+
+.container {
+    width: 100%;
+    background-color: #1f2438;
+    margin: auto;
+  }
+
+  .titleContainer {
+    width: 100%;
+    border-bottom: solid 1px #CCCCCC;
+    color: whitesmoke;
+    padding-top: 5vh;
+    padding-bottom: 2vh;
+    margin-bottom: 10vh;
+  }
+  
+  .mainTitle {
+    width: 60%;
+    margin: auto;
+    text-align: left;
+    color: green;
+  }
+
+  .images{
+    border: solid red 2px;
+  }
+
+
+  /* -------------------- */
+
+
+  /* Gallery container */
+#gallery-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+  grid-gap: 20px;
+  margin: 20px;
+  border: solid red 2px;
+}
+
+/* Gallery item */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  height: auto;
+}
+
+/* Caption */
+.gallery-item .caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 10px;
+  transition: transform 0.3s ease;
+  transform: translateY(100%);
+}
+
+/* Caption hover effect */
+.gallery-item:hover .caption {
+  transform: translateY(0);
+}
+
+/* Caption title */
+.gallery-item .caption h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* Caption description */
+.gallery-item .caption p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Navigation arrows */
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gallery-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-prev {
+  left: 20px;
+}
+
+.gallery-next {
+  right: 20px;
+}
